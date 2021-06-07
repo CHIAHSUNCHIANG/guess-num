@@ -3,17 +3,25 @@
 # 猜對的話 印出 "終於猜對了"
 # 猜錯的話 要告訴他比答案大/小
 
+
 import random
 
 r = random.randint(1, 100)
+count = 0
+
 while True:
+    count += 1
     number = input('Please type in one number between 1 ~ 100: ')
     number = int(number)
     if number == r:
         print('You are correct')
+        print('This is your', count, 'times')
         break
     elif number > r:
         print('Your answer is bigger than the number')
     elif number < r:
         print('Your answer is smaller than the number')
+# 延伸： 印出猜了幾次
+    print('This is your', count, 'times')
+
 
