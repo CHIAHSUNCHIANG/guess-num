@@ -5,8 +5,11 @@
 
 
 import random
-
-r = random.randint(1, 100)
+start = input('Please choose the start number of the random number list: ')
+end = input('Please choose the end number of the random number list: ')
+start = int(start)
+end = int(end)
+r = random.randint(start, end)
 count = 0
 
 while True:
